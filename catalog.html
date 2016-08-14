@@ -3,165 +3,152 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <div class="container">
+    <div class="container">
+      <header class="main-header">
         <nav class="main-navigation">
           <ul>
             <li>
-              <a href="#">ИНФОРМАЦИЯ</a>
+              <a href="#">Информация</a>
             </li>
             <li>
-              <a href="#">ФОТО И ВИДЕО</a>
+              <a href="#">Фото и видео</a>
             </li>
             <li>
-              <img src="" width="" height="" alt="">
+              <a href="#">Карта штата</a>
             </li>
             <li>
-              <a href="#">КАРТА ШТАТА</a>
-            </li>
-            <li>
-              <a href="#">ГОСТИНИЦЫ</a>
+              <a href="#">Гостиницы</a>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-    <main class="container">
-    <div class="filters">
-      <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="filters-infrastructure">
-          <p>ИНФРАСТРУКТУРА:</p>
-          <label><input type="checkbox" name="infrastructure" checked> БАССЕЙН</label>
-          <label><input type="checkbox" name="infrastructure"> ПАРКОВКА</label>
-          <label><input type="checkbox" name="infrastructure"> WI-FI</label>
+        <div class="top-logo">
+          <img src="img/top-logo.png" width="138" height="70" alt="Седона">
         </div>
-        <div class="filters-appartment-type">
-          <p>ТИП ЖИЛЬЯ:</p>
-          <label><input type="checkbox" name="appartment-type" checked> ГОСТИНИЦА</label>
-          <label><input type="checkbox" name="appartment-type" checked> МОТЕЛЬ</label>
-          <label><input type="checkbox" name="appartment-type" checked> АПАРТАМЕНТЫ</label>
+      </header>
+      <main>
+        <div class="filters">
+          <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="filters-checkbox-block">
+              <p>Инфраструктура:</p>
+              <ul>
+                <li>
+                  <input type="checkbox" name="infrastructure" id="pool-id" checked>
+                  <label for="pool-id">Бассейн</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="infrastructure" id="parking-id">
+                  <label for="parking-id">Парковка</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="infrastructure" id="wifi-id">
+                  <label for="wifi-id">wi-fi</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filters-checkbox-block">
+              <p>Тип жилья:</p>
+              <ul>
+                <li>
+                  <input type="checkbox" name="appartment-type" id="hotel-id" checked>
+                  <label for="hotel-id">Гостиница</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="appartment-type" id="motel-id" checked>
+                  <label for="motel-id">Мотель</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="appartment-type" id="appartment-id" checked>
+                  <label for="appartment-id">Апартаменты</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filters-price-block">
+              <p>Стоимость в сутки (р):</p>
+              <button class="btn" type="submit">Показать</button>
+            </div>
+          </form>
         </div>
-        <div class="filters-price">
-          <p>СТОИМОСТЬ В СУТКИ (Р):</p>
-          <table>
-            <tr>
-              <td>
-                <label>ОТ <input type="text" name="bottom-price" value="0"></lable>
-              </td>
-              <td>
-                <label>ДО <input type="text" name="top-price" value="3000"></lable>
-              </td>
-            </tr>
-          </table>
-          <div class="filters-price-slider">
-            <!-- Не очень понятно как реализовывать слайдер -->
-          <div>
-          <button class="btn" type="submit">ПОКАЗАТЬ</button>
+        <div class="sorts">
+          <div class="filter-found">
+            <b>Найдено:</b><b id="filter-found-cnt-id">3</b>
+          </div>
+          <ul class="sort-by">
+            <li>
+              Сортировка:
+            </li>
+            <li>
+              <a href="#">По цене</a>
+            </li>
+            <li>
+              <a href="#">По типу</a>
+            </li>
+            <li>
+              <a href="#">По рейтингу</a>
+            </li>
+          </ul>
+          <div class="sort-direction">
+            <a href="#" class="sort-direction-arrow arrow-up"></a>
+            <a href="#" class="sort-direction-arrow arrow-down"></a>
+          </div>
         </div>
-      </form>
-    </div>
-    <div class="sorts">
-      <div class="filter-found">
-        <b>НАЙДЕНО:</b><b id="filter-found-cnt-id">3</b>
-      </div>
-      <ul class="sort-by">
-        <li>
-          СОРТИРОВКА:
-        </li>
-        <li>
-          <a href="#">ПО ЦЕНЕ</a>
-        </li>
-        <li>
-          <a href="#">ПО ТИПУ</a>
-        </li>
-        <li>
-          <a href="#">ПО РЕЙТИНГУ</a>
-        </li>
-      </ul>
-      <div class="sort-direction">
-        <!--Стрелочки направления сортировки -->
-      </div>
-    </div>
-    <article class="hotel">
-      <div class="hotel-img" >
-      </div>
-      <div class="hotel-bookin">
-        <h2>AMARA RESORT &amp; SPA</h2>
-        <table>
-          <tr>
-            <td>ГОСТИНИЦА</td>
-            <td>ОТ 3500 Р.</td>
-          </tr>
-          <tr>
-            <td class="hotel-bookin-description">
-              <a hreh="#">ПОДРОБНЕЕ</a>
-            </td>
-            <td class="hotel-bookin-accept">
-              <a href="#">ЗАБРОНИРОВАТЬ</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="hotel-rating">
-        <p>****<!-->Звездочки<--><p>
-        <a class="rating-btn" href="#">РЕЙТИНГ: 8.5</a>
-      </div>
-    </article>
-    <article class="hotel">
-      <div class="hotel-img" >
-      </div>
-      <div class="hotel-bookin">
-        <h2>DESERT QUAIL INN</h2>
-        <table>
-          <tr>
-            <td>МОТЕЛЬ</td>
-            <td>ОТ 2000 Р.</td>
-          </tr>
-          <tr>
-            <td class="hotel-bookin-description">
-              <a hreh="#">ПОДРОБНЕЕ</a>
-            </td>
-            <td class="hotel-bookin-accept">
-              <a href="#">ЗАБРОНИРОВАТЬ</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="hotel-rating">
-        <p>**<!-->Звездочки<--><p>
-        <a class="rating-btn" href="#">РЕЙТИНГ: 8.9</a>
-      </div>
-    </article>
-    <article class="hotel">
-      <div class="hotel-img" >
-      </div>
-      <div class="hotel-bookin">
-        <h2>VILLAS AT POCO DIABLO</h2>
-        <table>
-          <tr>
-            <td>АПАРТАМЕНТЫ</td>
-            <td>ОТ 4000 Р.</td>
-          </tr>
-          <tr>
-            <td class="hotel-bookin-description">
-              <a hreh="#">ПОДРОБНЕЕ</a>
-            </td>
-            <td class="hotel-bookin-accept">
-              <a href="#">ЗАБРОНИРОВАТЬ</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="hotel-rating">
-        <p>***<!-->Звездочки<--><p>
-        <a class="rating-btn" href="#">РЕЙТИНГ: 9.2</a>
-      </div>
-    </article>
-    </main>
-    <footer class="main-footer">
-      <div class="container">
+        <section class="hotels">
+          <article class="hotel">
+            <div class="hotel-img" >
+              <img src="img/hotel-one.jpg" width="135" height="90">
+            </div>
+            <div class="hotel-bookin">
+              <h2>Amara resort &amp; spa</h2>
+              <p>Гостиница от 3500 р.</td>
+              <div class="hotel-bookin-actions">
+                <a hreh="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel-rating">
+              <p class="hotel-rating-stars"></p>
+              <div class="hotel-rating-number" href="#">Рейтинг: 8.5</div>
+            </div>
+          </article>
+          <article class="hotel">
+            <div class="hotel-img" >
+              <img src="img/hotel-two.jpg" width="135" height="90">
+            </div>
+            <div class="hotel-bookin">
+              <h2>Desert quail inn</h2>
+              <p>Мотель от 2000 р.</td>
+              <div class="hotel-bookin-actions">
+                <a hreh="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel-rating">
+              <p class="hotel-rating-stars"></p>
+              <div class="hotel-rating-number" href="#">Рейтинг: 8.9</div>
+            </div>
+          </article>
+          <article class="hotel">
+            <div class="hotel-img" >
+              <img src="img/hotel-three.jpg" width="135" height="90">
+            </div>
+            <div class="hotel-bookin">
+              <h2>Villas at poco diablo</h2>
+              <p>Апартаменты от 4000 р.</td>
+              <div class="hotel-bookin-actions">
+                <a hreh="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel-rating">
+              <p class="hotel-rating-stars"></p>
+              <div class="hotel-rating-number" href="#">Рейтинг: 9.2</div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="main-footer">
         <section class="footer-hashtag">
           <a href="#">#VISITSEDONA</a>
         </section>
@@ -171,9 +158,9 @@
           <a class="social-btn social-btn-youtube" href="#">Ютуб</a>
         </section>
         <section class="footer-copyright">
-          WEBSITE BY <a href="https://htmlacademy.ru"><img src=""></a>
+          WEBSITE BY <a href="https://htmlacademy.ru"><img src="img/html-academy-logo.png" width="113" height="39"></a>
         </section>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
