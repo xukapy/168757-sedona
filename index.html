@@ -31,13 +31,12 @@
       <main>
         <div class="index-welcome">
           <img src="img/cedona-welcome.jpg" width="1200" height="564" alt="Welcome to CEDONA">
-          <p class="index-welcome-triangle"><!-- Здесь будет псевдографика треугольников --></p>
         </div>
         <div class="index-content">
           <h1>Седона - небольшой городок в аризоне, заслуживающий большего</h1>
-          <p>Рассмотрим 5 причин, по которым седона круче, чем гранд коньон!</p>
+          <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
         </div>
-        <section class="feature">
+        <section class="feature feature-number-one clearfix">
           <div class="feature-description">
             <h2 class="feature-name">Настоящий городок</h2>
             <p class="feature-number">№1</p>
@@ -47,7 +46,7 @@
             <img src="img/feature-image-one.jpg" width="800" height="256">
           </div>
         </section>
-        <section class="accommodation">
+        <section class="accommodation clearfix">
           <div class="accommodation-description hotel">
             <b>Жилье</b>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -61,7 +60,7 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </section>
-        <section class="feature">
+        <section class="feature feature-number-two clearfix">
           <div class="feature-image">
             <img src="img/feature-image-two.jpg" width="800" height="256">
           </div>
@@ -71,7 +70,7 @@
             <p>Да, по нему можно пройти! если конечно вы осмелитесь</p>
           </div>
         </section>
-        <section class="features">
+        <section class="features clearfix">
           <div class="features-description">
             <b class="features-name">Небольшая площадь</b>
             <p class="features-number">№3</p>
@@ -93,30 +92,30 @@
             <b>Заинтересовались?</b>
             <p>Укажите предпологаемые даты поездки,<br>
               и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <div class="hotels-filter">
-              <form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="checkin-field-id">Дата заезда:</label>
-                <input id="checkin-field-id" type="text" name="checkin-date" value="24 АПРЕЛЯ 2016">
-                <label for="checkout-field-id">Дата выезда:</label>
-                <input id="checkout-field-id" type="text" name="checkout-date" value="4 ИЮЛЯ 2016">
-                <label for="adults-field-id">Взрослые:</label>
-                <button class="btn-inc" type="button">-</button>
-                <input id="adults-field-id" type="text" name="adults-cnt" value="2">
-                <button class="btn-inc" type="button">+</button>
-                <label for="children-field-id">Дети:</label>
-                <button class="btn-inc" type="button">-</button>
-                <input id="children-field-id" type="text" name="children-cnt" value="0">
-                <button class="btn-inc" type="button">+</button>
-                <button class="btn" type="submit">Найти</button>
-              </form>
-            </div>
             <button class="btn hotels-form-btn" type="button">Поиск гостиницы в седоне</button>
+          </div>
+          <div class="hotels-filter">
+            <form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="checkin-field-id">Дата заезда:</label>
+              <input id="checkin-field-id" type="text" name="checkin-date" value="24 АПРЕЛЯ 2016">
+              <label for="checkout-field-id">Дата выезда:</label>
+              <input id="checkout-field-id" type="text" name="checkout-date" value="4 ИЮЛЯ 2016">
+              <label for="adults-field-id">Взрослые:</label>
+              <button class="btn-inc" type="button">-</button>
+              <input id="adults-field-id" type="text" name="adults-cnt" value="2">
+              <button class="btn-inc" type="button">+</button>
+              <label for="children-field-id">Дети:</label>
+              <button class="btn-inc" type="button">-</button>
+              <input id="children-field-id" type="text" name="children-cnt" value="0">
+              <button class="btn-inc" type="button">+</button>
+              <button class="btn" type="submit">Найти</button>
+            </form>
           </div>
           <div class="hotels-map">
           </div>
         </section>
       </main>
-      <footer class="main-footer">
+      <footer class="main-footer clearfix">
         <section class="footer-hashtag">
           <a href="#">#VISITSEDONA</a>
         </section>
