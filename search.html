@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul class="clearfix">
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Фото и видео</a>
+            </li>
+            <li>
+              <a href="catalog.html">Гостиницы</a>
+            </li>
+            <li>
+              <a href="#">Карта штата</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="top-logo">
+          <img src="img/top-logo.png" width="138" height="70" alt="Седона">
+        </div>
+      </header>
+      <main class="search-wrapper">
+        <div class="modal-window">
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form-item">
+              <label for="checkin-field-id">Дата заезда:</label>
+              <input class="form-date-field" id="checkin-field-id" type="text" name="checkin-date" value="24 АПРЕЛЯ 2016">
+              <span class="icon-calendar"></span>
+            </div>
+            <div class="form-item">
+              <label for="checkout-field-id">Дата выезда:</label>
+              <input class="form-date-field" id="checkout-field-id" type="text" name="checkout-date" value="4 ИЮЛЯ 2016">
+              <span class="icon-calendar"></span>
+            </div>
+            <div class="form-item form-item-inline">
+              <label for="adults-field-id">Взрослые:</label>
+              <button class="btn-inc"><span class="icon-minus"></span></button>
+              <input class="field-cnt" id="adults-field-id" type="text" name="adults-cnt" value="2">
+              <button class="btn-dec"><span class="icon-plus"></button>
+            </div>
+            <div class="form-item form-item-inline">
+              <label for="children-field-id">Дети:</label>
+              <button class="btn-inc"><span class="icon-minus"></span></button>
+              <input class="field-cnt" id="children-field-id" type="text" name="children-cnt" value="0">
+              <button class="btn-dec"><span class="icon-plus"></button>
+            </div>
+            <button class="btn hotel-search-btn" type="submit">Найти</button>
+          </form>
+        </div>
+      </main>
+      <footer class="main-footer clearfix">
+        <section class="footer-hashtag">
+          <a href="#">#VISITSEDONA</a>
+        </section>
+        <section class="footer-social">
+          <a class="social-btn social-btn-twitter" href="#">Твиттер
+            <span class="icon-twitter"></span>
+          </a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук
+            <span class="icon-facebook"></span>
+          </a>
+          <a class="social-btn social-btn-youtube" href="#">Ютуб
+            <span class="icon-youtube"></span>
+          </a>
+        </section>
+        <section class="footer-copyright">
+          <span>Website by</span>
+          <a href="https://htmlacademy.ru">
+            <div class="html-academy-logo"></div>
+          </a>
+        </section>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

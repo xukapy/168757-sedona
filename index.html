@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -93,7 +92,7 @@
             <b>Заинтересовались?</b>
             <p>Укажите предпологаемые даты поездки,<br>
               и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <button class="btn modal-window-toggle-btn" type="button">Поиск гостиницы в седоне</button>
+            <a class="btn modal-window-toggle-btn" href="search.html">Поиск гостиницы в седоне</a>
           </div>
           <div class="modal-window">
             <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -109,11 +108,15 @@
               </div>
               <div class="form-item form-item-inline">
                 <label for="adults-field-id">Взрослые:</label>
+                <button class="btn-inc"><span class="icon-minus"></span></button>
                 <input class="field-cnt" id="adults-field-id" type="text" name="adults-cnt" value="2">
+                <button class="btn-dec"><span class="icon-plus"></button>
               </div>
               <div class="form-item form-item-inline">
                 <label for="children-field-id">Дети:</label>
+                <button class="btn-inc"><span class="icon-minus"></span></button>
                 <input class="field-cnt" id="children-field-id" type="text" name="children-cnt" value="0">
+                <button class="btn-dec"><span class="icon-plus"></button>
               </div>
               <button class="btn hotel-search-btn" type="submit">Найти</button>
             </form>

@@ -1,3 +1,39 @@
+/* cyrillic */
+@font-face {
+ font-family: 'PT Sans';
+ font-style: normal;
+ font-weight: 400;
+ src:  local('PT Sans'), local('PTSans-Regular'), url("../fonts/ptsans.woff2") format('woff2');
+ unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* latin */
+@font-face {
+ font-family: 'PT Sans';
+ font-style: normal;
+ font-weight: 400;
+ src: local('PT Sans'), local('PTSans-Regular'), url("../fonts/ptsans.woff2") format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* cyrillic */
+@font-face {
+ font-family: 'PT Sans';
+ font-style: normal;
+ font-weight: 700;
+ src: local('PT Sans Bold'), local('PTSans-Bold'), url("../fonts/ptsansbold.woff2") format('woff2');
+ unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* latin */
+@font-face {
+ font-family: 'PT Sans';
+ font-style: normal;
+ font-weight: 700;
+ src: local('PT Sans Bold'), local('PTSans-Bold'), url("../fonts/ptsansbold.woff2") format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 body {
   background-color: #f2f2f2;
   font-size: 14px;
@@ -332,10 +368,11 @@ cursor: pointer;
 }
 
 .modal-window-toggle-btn {
+  display: block;
   background-color: #766357;
-  min-height: 86px;
-  margin:0;
-  padding:0;
+  /*min-height: 86px;*/
+  margin: 0;
+  padding: 30px 0 30px;
   width: inherit;
 }
 
@@ -392,34 +429,6 @@ cursor: pointer;
   margin-right: 0;
 }
 
-.form-item-inline::before {
-  position: absolute;
-  content: "\e802";
-  width: 20px;
-  height: 20px;
-  top: 6px;
-  left: 126px;
-  font-family: "symbols-sedona";
-  font-size: 14px;
-  color: #a9a9a9;
-}
-
-.form-item-inline::after {
-  position: absolute;
-  content: "\e801";
-  width: 20px;
-  height: 20px;
-  top: 6px;
-  left: 201px;
-  font-family: "symbols-sedona";
-  font-size: 14px;
-  color: #a9a9a9;
-}
-
-.form-item-inline:hover::before {
-  color: #000000;
-}
-
 .hotel-search-form  label {
   display: inline-block;
   vertical-align: top;
@@ -440,6 +449,7 @@ cursor: pointer;
   border: 0;
   background: #f2f2f2;
   width: 310px;
+  height: 38px;
 }
 
 .hotel-search-form input:hover {
@@ -480,10 +490,32 @@ cursor: pointer;
 
 .form-item-inline .field-cnt {
   text-align: center;
-  width: 38px;
-  padding-left: 38px;
-  padding-right: 38px;
-  box-sizing: content-box;
+  width: 37px;
+  padding-top: 7px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.btn-inc, .btn-dec {
+  vertical-align: top;
+  margin: 0;
+  padding: 7px 9px 7px;
+  box-sizing: border-box;
+  height: 38px;
+  font-size: 14px;
+  color: #a9a9a9;
+  background: #f2f2f2;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.btn-inc:hover, .btn-dec:hover {
+  color: #000000;
+}
+
+.btn-inc:active, .btn-dec:active {
+  color: #81b3d2;
 }
 
 .form-item-inline:last-of-type label {
@@ -1028,7 +1060,7 @@ cursor: pointer;
   position: relative;
   float: right;
   width: 400px;
-  padding-top: 46px;
+  padding-top: 40px;
 }
 
 .footer-copyright:hover {
@@ -1036,16 +1068,19 @@ cursor: pointer;
 }
 
 .footer-copyright span {
-  margin-left: 103px;
+  display: inline-block;
+  margin-left: 102px;
+  margin-top: 6px;
   font-size: 14px;
   line-height: 26px;
   color: #000000;
+  vertical-align: top;
 }
 
 .footer-copyright a {
-  position: absolute;
-  top: 40px;
-  left: 184px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 4px;
 }
 
 .html-academy-logo {
@@ -1062,4 +1097,9 @@ cursor: pointer;
 
 .html-academy-logo:active {
   background-position: 0 -95px;
+}
+
+.search-wrapper .modal-window {
+  display: block;
+  position: static;
 }
